@@ -1,0 +1,17 @@
+测验
+2019年9月18日16:10:50
+参与人:关鑫鑫
+1.一个完整的JavaScript结构包括哪些部分?
+答:ECMAScript  DOM  BOM
+
+2.JavaScript脚本分成哪几种?
+答:内部脚本  外部脚本
+
+3.JavaScript错误有哪几种?特点是什么?
+答:语法错误 执行错误
+   特点：语法错误，代码错误少一个括号，少一个引号，直接报错。
+        代码正确，执行错误，也不会运行
+
+4.JavaScript的数据类型包括什么?分别写出.
+答:简单数据类型：number boolean  string null undefined
+   复杂数据类型：object
