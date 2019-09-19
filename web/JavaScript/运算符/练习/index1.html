@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <!--需求：
+            1. 3.8妇女节，该饭店对女性顾客打5折优惠，其他顾客不优惠。对优惠和不优惠的顾客显示弹窗。
+            2. 使用confirm函数和使用oninput方法
+            3. 使用三目运算符做判断-->
+    <input  type="date" id="d">
+    <script>
+        var d =document.getElementById('d');
+        var nw = confirm('女王请点确定');
+
+        d.oninput = function (){
+           // d.value == '2019-03-08' && nw ? alert('5折'):alert('不打折');
+           if(nw && d.value== '2019-03-08'){
+              alert('打五折');
+           }else{
+              alert('无优惠');
+           }
+        }
+    </script>
+</body>
+</html>
