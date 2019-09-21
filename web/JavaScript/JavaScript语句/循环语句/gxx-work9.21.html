@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <button id="out">取款</button>
+    <script>
+        var out = document.getElementById('out');
+        var cardID = '123456789',
+            password = '123456',
+            money = 10000;
+            var CardID = prompt('请输入您的卡号');
+            if(CardID == cardID){
+                var Password = prompt('请输入您的密码');
+                if(Password == password){
+                    show.innerHTML = '您的余额为' + money;
+                    out.onclick = function(){
+                        var outmoney = Number(prompt('请输入取款金额'));
+                        if(outmoney > money){
+                            alert('对不起，您的余额不足');
+                        }else{
+                            show.innerHTML = '取款成功，您的余额为' + (money-outmoney);
+                            money -= outmoney;
+                        }
+                    }
+                }else{
+                    alert('您输入的密码有误');
+                }
+            }else{
+                alert('您输入的卡号有误');
+            }
+        
+       
+    </script>
+</body>
+</html>
