@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+        <!-- 需求1：浏览器窗口变化随机变色
+        1：缩放浏览器窗口触发事件
+        2.在窗口缩放的时候body随机改变自身颜色 -->
+        
+        <script>
+                window.onresize = function(){
+                    var r = Math.random()*255;
+                    var g = Math.random()*255;
+                    var b = Math.random()*255;
+                    document.body.style.backgroundColor  = 'rgb('+r+','+g+','+b+')';
+                }
+        </script>
+       
+</body>
+</html>

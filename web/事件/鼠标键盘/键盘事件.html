@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        padding:100px;
+    }
+    img{
+        width:200px;
+        display:block;
+        border:1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <img src="1.jpg" alt="" id="img">
+    <script>
+         var img = document.getElementById('img');
+         var w =0,s=0,a=0,d=0;  
+
+         document.onkeydown = function(e){
+             alert('按下');
+         }
+         document.onkeydown = function(e){
+            // alert(e.keyCode);
+            //37左
+            //38上
+            //39右
+            //40下
+            switch(e.keyCode){
+                case 39: 
+                    img.style.marginLeft = d * 50 + 'px';
+                    d++;
+                    break;
+                case 40:
+                    img.style.marginTop = s * 50 + 'px';
+                    s++;
+                    break;
+            }
+         }
+         document.onkeyup=function(e){
+             alert('抬起了');
+         }
+    </script>
+</body>
+</html>

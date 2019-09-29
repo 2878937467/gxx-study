@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    
+    <script>
+       //事件触发时     调用的函数(event)
+       document.onclick=function(e){
+           //      非ie      低版本ie
+           var ev = e  ||  window.event;
+           console.log(ev.clientX);
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     #box{
+        width:400px;
+        height:300px;
+        background-color:blue;
+       margin:0 auto;
+     }
+     #mydiv{
+        width:100px;
+        height:100px;
+        background-color:red;
+        color:white;
+        font-size:30px;
+     }
+    </style>
+</head>
+<body>
+    <div id="box">
+      <div id="mydiv"></div>
+    </div>
+    <script>
+       var box=document.getElementById('box');
+       var mydiv=document.getElementById('mydiv');
+       //点击事件
+       mydiv.onclick=function(){
+           alert('点击事件');
+       }
+    
+       //双击事件
+       mydiv.ondblclick=function(){
+           alert('双击事件');
+       }
+
+        //鼠标按下
+       mydiv.onmousedown=function(){
+           mydiv.innerHTML='按下事件';
+       }
+
+       //鼠标抬起
+       mydiv.onmouseup=function(){
+           mydiv.innerHTML='';
+       }
+       
+       //鼠标移动
+       //需要注意的是只要鼠标一移动就触发
+       document.onmousemove=function(){
+           console.log('移动了');
+       }
+       mydiv.onmousemove=function(){
+           console.log('div');
+       }
+       
+
+    //鼠标移入
+    //会触发冒泡(从内逐级向外依次触发)
+     mydiv.onmousemove=function(){
+          console.log('红');
+     } 
+    //会触发多次取决于嵌套和鼠标位置
+     box.onmousemove=function(){
+          console.log('蓝');
+     }
+
+     mydiv.onmouseenter=function(){
+          console.log('红');
+     } 
+    //不会触发多次
+     box.onmouseenter=function(){
+          console.log('蓝');
+     }
+
+
+    //鼠标移出
+     mydiv.onmouseout=function(){
+          console.log('离开红');
+     } 
+     //会触发多次取决于嵌套和鼠标位置
+     box.onmouseout=function(){
+          console.log('离开蓝');
+     }
+
+     mydiv.onmouseleave=function(){
+          console.log('离开红');
+     } 
+     //不会触发多次
+     box.onmouseleave=function(){
+          console.log('离开蓝');
+     }
+
+    </script>
+</body>
+</html>
