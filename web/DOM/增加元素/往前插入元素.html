@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <ul id="ul">
+        <li id="pg">苹果</li>
+        <li id="jz">桔子</li>
+        <li>香蕉</li>
+    </ul>
+    <script>
+       var ul =document.getElementById('ul');
+       //获取苹果
+       var pg =document.getElementById('pg');
+       //获取桔子
+       var li =document.createElement('li');
+       //在父级中插入一个元素(插入元素，在谁前面)
+       ul.insertBefore(li,jz)
+       var t=document.createTextNode('火龙果');
+       li.appendChild(t);
+    </script>
+</body>
+</html>

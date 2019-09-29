@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <h1 id="h1">nihao</h1>
+
+    <ul id="ul"></ul>
+    
+    <script>
+        // //用一个变量承接在文档中'创建'的一个元素
+        // var div = document.createElement('div');
+        // //将已经创建的元素放在想放的位置
+        // documen.body.appendChild(div);
+
+
+       var h1 =document.getElementById('h1');
+       var a = document.createElement('a');
+       h1.appendChild(a);
+     
+       var ul =document.getElementById('ul');
+    //  var li1 =document.createElement('li');
+    //  var li2 =document.createElement('li');
+    //  var li3 =document.createElement('li');
+    //  ul.appendChild(li1);
+    //  ul.appendChild(li2);
+    //  ul.appendChild(li3);
+        for(var i=0;i<10;i++){
+            var li=document.createElement('li');
+            ul.appendChild(li);
+         }
+    </script>
+</body>
+</html>

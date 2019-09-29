@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a{
+           width: 200px;
+           height: 200px;
+       }
+       .b{
+        background-color:  red;
+       }
+       .c{
+        background-color: blue;
+       }
+     </style>
+</head>
+<body>
+        <!-- 需求3:
+        1.一个200*200的红色方框,一个按钮
+        2.点击按钮,让红色方框变成蓝色
+        3.必须用className的赋值方法变化 -->
+
+         <div id="mydiv" class="a b "></div>
+         <button id="nt">点击变色</button>
+         <script>
+            var div = document.getElementById('mydiv');
+            console.log(div.className);
+            nt.onclick=function(){
+                div.className ='a c';
+            }
+                    
+         </script>
+ </body>
+</html>
