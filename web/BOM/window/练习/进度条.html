@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #box{
+           width:500px;
+           height:30px;
+           border:1px solid black;
+       }
+       #bar{
+           width:0;
+           height:30px;
+           border-color:orange;
+           background-color: orange;
+       }
+    </style>
+</head>
+<body>
+    <!-- 进度条滚动 -->
+    <!-- (1) -->
+    <!-- <progress value="0" id="d">
+    <script>
+        var c = 0;
+        var d= document.getElementById("d");
+        var timer = setInterval(function() {
+            c += 0.1;
+            d.value = c;
+            if (c ==1) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script> -->
+    
+    
+    <!-- (2) -->
+    <!-- <div id="box">
+        <div id="bar"></div>
+    </div>
+    <script>
+       var box=document.getElementById('box');
+       var bar=document.getElementById('bar');
+       var timer=null;
+       var num=0;
+       timer=setInterval(function(){
+             num+=0.1;
+             if(num>100){
+                 clearInterval(timer);
+             }else{
+                bar.style.width=num+'%';
+             }
+       },50);
+    </script> -->
+
+
+    <!-- 点击滚动条 -->
+        <div id="box">
+            <div id="bar"></div>
+        </div>
+        <script>
+           var box=document.getElementById('box');
+           var bar=document.getElementById('bar');
+           box.onclick=function(e){
+               var ev=e|| window.event;
+               num=e.clientX-9;
+               bar.style.width = num + 'px';
+            }
+        </script>
+
+</body>
+</html>

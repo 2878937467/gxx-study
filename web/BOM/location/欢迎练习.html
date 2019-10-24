@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        var l = location.href;
+        var n1 = l.length;
+        var n2 = l.indexOf('=');
+        var txt = decodeURI(l.substr(n2 + 1, n1 - n2));
+        h1.innerText = '欢迎你,' + txt;
+    </script>
+</body>
+
+</html>

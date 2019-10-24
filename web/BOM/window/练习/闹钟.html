@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <audio src="1.mp3" preload="auto" id="music">
+    </audio>
+    <div id="nt"></div>
+    <div id="date">
+    </div>
+    <script>
+        var date = document.getElementById('date');
+        var music = document.getElementById('music');
+        var nt = document.getElementById('nt');
+        function a(){
+            var now = new Date();
+            var target = new Date("2019/10/14  18:52")
+            var s = parseInt((target.getTime() - now.getTime()) / 1000);
+            var h = parseInt(s % (3600 * 24) / 3600);
+            var m = parseInt((s % 3600) / 60);
+            var s = parseInt(s % 60);
+            nt.innerHTML =now;
+            if (now=='Mon Oct 14 2019 18:52:00 GMT+0800 (中国标准时间)'&&music.paused) {
+                music.play();
+                date.innerHTML = '闹钟正在响起';
+            }
+        }
+        setInterval(a, 1000);
+    </script>
+</body>
+
+</html>

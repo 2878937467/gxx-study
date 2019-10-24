@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    setTimeout(回调函数,时间);
+       setTimeout(function(){
+          alert('你好,欢迎光临');
+       },2000);
+    //    clearTimeout(定时器的名字);
+
+    //递归调用
+    function times(){
+        //执行代码
+        console.log('执行的代码段');
+        setTimeout(function(){
+           times();
+        },1000)
+    }
+
+    //调用
+    times;
+    </script>
+</body>
+</html>

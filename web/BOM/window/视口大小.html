@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       body{
+           /* width:2000px; */
+           height:2400px;
+       }
+    </style>
+</head>
+<body>
+    <script>
+         //视口相当于document.body的宽度和高度
+         var w =document.body.clientWidth;
+         var h =document.body.clientHeight;   
+
+         console.log(w+','+h);
+         
+         //浏览器展现区域的宽高,包含滚动条所占区域.
+         var ww =window.innerWidth;
+         var wh =window.innerHeight;
+
+         console.log(ww+','+wh);
+
+         //整个浏览器在显示屏上所占有的宽度和高度,包含所有
+         var ow=window.outerWidth;
+         var oh=window.outerHeight;
+
+         console.log(ow+','+oh);
+    </script>
+</body>
+</html>

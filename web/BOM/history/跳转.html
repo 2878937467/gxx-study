@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        练习：
+        1.实现不同终端的跳转
+        2.页面宽度低于600px的时候默认为手机端
+        3.如果判断是手机端就打开京东的移动端界面
+        4.如果判断是pc端就打开京东的pc端界面
+        5.移动端路径 http://m.jd.com
+        pc端  http://www.jd.com
+     -->
+     <button id="btn">按钮</button>
+    <script>
+        document.getElementById('btn').onclick = function () {
+            if(window.innerWidth < 600) {
+                location.href = 'https://m.jd.com';
+            } else {
+                location.href = 'https://www.jd.com';
+            }
+        }
+    </script>
+
+</body>
+</html>

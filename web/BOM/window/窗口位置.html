@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button  id="a">跳转</button>
+    <button id="a">关闭</button>
+    <script>
+       var x = window.screenX;
+       var y = window.screenY;
+       console.log(x + ',' + y);
+    
+       //也就是可用resizeTo或者resizeBy
+       //改变窗口大小的只是那些用window.open打开的页面,
+       //并且window.open打开的窗户只能有一个tab;
+    //    window.resizeTo(200,200);
+
+    document.getElementById('a').onclick=function(){
+            window.close();
+    }
+    </script>
+</body>
+</html>

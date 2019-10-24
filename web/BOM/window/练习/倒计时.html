@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+       var num=5;
+       document.getElementById('mydiv').innerHTML=num;
+       var timer= setInterval(function(){
+           num--;
+           if(num<=0){
+              clearInterval(timer);
+              document.getElementById('mydiv').innerHTML='时间到';
+           }else{
+              document.getElementById('mydiv').innerHTML=num;
+           }
+
+       },1000)
+
+    </script>
+</body>
+</html>

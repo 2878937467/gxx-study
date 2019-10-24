@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #int1{
+            margin:10px;
+        }    
+        #int2{
+            margin-top:10px;
+            margin-left:20px;
+        }
+        #int3{
+            width:120px;
+            height:30px;
+            margin-top:20px;
+            margin-left:80px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ##练习：
+     需求：
+     1.创建一个登录页面，含用户名和密码
+     2.登录后验证密码必须为123，否则弹出登录失败
+     3.登录后跳转到另一页面，页面上大文字提示“欢迎你，xxx”，xxx的内容为用户名。
+     -->
+      <form>
+          用户名：<input type="text" id="int1"></br>
+          密码：      <input type="password" id="int2"></br>
+          <input type="button" id="int3" value="登录">
+      </form>
+      <script>
+        int3.onclick = function () {
+            if (int2.value=='123') {
+                location.href = "欢迎练习.html?"+'us='+int1.value;
+            } else {
+                alert('登录失败');
+            }
+        }
+    </script>
+
+</body>
+</html>
